@@ -12,7 +12,15 @@
     <RepositoryUrl>https://github.com/Turboloser/CamlQueryBuilder</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>CAML,SharePoint</PackageTags>
-    <PackageLicenseFile>D:\Projects\GitHub\CamlQueryBuilder\CamlQueryBuilder\CamlQueryBuilder\License.txt</PackageLicenseFile>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Include="License.txt" Pack="true" PackagePath="License.txt" >
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>
