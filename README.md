@@ -54,7 +54,7 @@ string complexCamlQuery = new CamlQueryBuilderRoot(new Or(namesToCheck.Select(na
       <FieldRef Name="Account" Ascending="FALSE" />
     </OrderBy>
     <GroupBy>
-      <FieldRef Name="Account" />
+      <FieldRef Name="FirstName" />
     </GroupBy>
     <ViewFields>
       <FieldRef Name="FirstName" />
@@ -66,45 +66,27 @@ string complexCamlQuery = new CamlQueryBuilderRoot(new Or(namesToCheck.Select(na
       <Or>
         <Eq>
           <FieldRef Name="Vorname" />
-          <Value Type="Text">Gordon</Value>
+          <Value Type="Text">John</Value>
         </Eq>
         <Or>
           <Eq>
             <FieldRef Name="Vorname" />
-            <Value Type="Text">Abhi</Value>
+            <Value Type="Text">Jane</Value>
           </Eq>
           <Or>
             <Eq>
               <FieldRef Name="Vorname" />
-              <Value Type="Text">Ulf</Value>
+              <Value Type="Text">Max</Value>
             </Eq>
             <Or>
               <Eq>
                 <FieldRef Name="Vorname" />
-                <Value Type="Text">Claudia</Value>
+                <Value Type="Text">Powel</Value>
               </Eq>
-              <Or>
-                <Eq>
-                  <FieldRef Name="Vorname" />
-                  <Value Type="Text">Boris</Value>
-                </Eq>
-                <Or>
-                  <Eq>
-                    <FieldRef Name="Vorname" />
-                    <Value Type="Text">Tobi</Value>
-                  </Eq>
-                  <Or>
-                    <Eq>
-                      <FieldRef Name="Vorname" />
-                      <Value Type="Text">Peter</Value>
-                    </Eq>
-                    <Eq>
-                      <FieldRef Name="Vorname" />
-                      <Value Type="Text">Praktipeter</Value>
-                    </Eq>
-                  </Or>
-                </Or>
-              </Or>
+              <Eq>
+                <FieldRef Name="Vorname" />
+                <Value Type="Text">Arthur</Value>
+              </Eq>
             </Or>
           </Or>
         </Or>
