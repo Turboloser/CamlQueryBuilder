@@ -111,26 +111,26 @@ In this example, we have a list of first names that we want to search the ShareP
     <Where>
       <Or>
         <Eq>
-          <FieldRef Name="Vorname" />
+          <FieldRef Name="FirstName" />
           <Value Type="Text">John</Value>
         </Eq>
         <Or>
           <Eq>
-            <FieldRef Name="Vorname" />
+            <FieldRef Name="FirstName" />
             <Value Type="Text">Jane</Value>
           </Eq>
           <Or>
             <Eq>
-              <FieldRef Name="Vorname" />
+              <FieldRef Name="FirstName" />
               <Value Type="Text">Max</Value>
             </Eq>
             <Or>
               <Eq>
-                <FieldRef Name="Vorname" />
+                <FieldRef Name="FirstName" />
                 <Value Type="Text">Powel</Value>
               </Eq>
               <Eq>
-                <FieldRef Name="Vorname" />
+                <FieldRef Name="FirstName" />
                 <Value Type="Text">Arthur</Value>
               </Eq>
             </Or>
