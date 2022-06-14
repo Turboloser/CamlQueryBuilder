@@ -1,8 +1,13 @@
 # CamlQueryBuilder
 A simple CAML query builder for C# using builder and fluent patterns to easily create querys which are customizable at runtime.
 
+Install:
+Simple install via NuGet.
+```c#
+Install-Package CamlQueryBuilder -Version 1.0.0
+```
 
-
+Usage:
 Using the CAMLQueryBuilder is very simple. You only need rudimentary knowledge about the structure of Caml querys. Let's assume that user data is to be exported from a SharePoint list. We are only interested in users with the last name "Doe" and the first name "John" or "Jane". Furthermore the users should not be born on 01/01/1970, because the administrator uses this birthdate for obsolete accounts. So the caml query could look like this:
 
 ```c#
