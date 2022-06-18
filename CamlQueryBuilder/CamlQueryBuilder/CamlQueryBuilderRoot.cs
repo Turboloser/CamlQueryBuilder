@@ -27,7 +27,7 @@ namespace CamlQueryBuilder
         /// A List of existing Types can be found at:
         /// https://docs.microsoft.com/en-us/previous-versions/office/sharepoint-server/ms428806(v=office.15)?redirectedfrom=MSDN
         /// </summary>
-        public enum ValueType { Integer, Text, Note, DateTime, Lookup, Number, Currency }
+        public enum ValueType { Invalid, Integer, Text, Note, DateTime, Counter, Choice, Lookup, Boolean, Number, Currency, URL, Computed, Threading, Guid, MultiChoice, GridChoice, Calculated, File, Attachments, User, Recurrence, CrossProjectLink, ModStat, Error, ContentTypeId, PageSeparator, ThreadIndex, WorkflowStatus, AllDayEvent, WorkflowEventType, MaxItems }
 
         /// <summary>
         /// The Root Element containing all CamlQuery Elements.
@@ -266,7 +266,8 @@ namespace CamlQueryBuilder
             //Config additional QueryOptions
             string queryOptionsElement = "";
 
-            if (queryOptionIncludeMandatoryColumns) //<-- made this strange Construct to keep the Option to add additional QueryOptions later on
+            if (queryOptionIncludeMandatoryColumns ||
+                queryOptionDateInUTC)
             {
                 queryOptionsElement = "<QueryOptions>";
 
