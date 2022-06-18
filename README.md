@@ -1,7 +1,19 @@
 # CamlQueryBuilder
 A simple CAML query builder for C# using builder and fluent patterns to easily create querys which are customizable at runtime.
 
+## Install:
 
+Simple install via NuGet Package Manager:
+```
+Install-Package CamlQueryBuilder -Version 1.0.0
+```
+
+Or use the .NET CLI:
+```
+dotnet add package CamlQueryBuilder --version 1.0.0
+```
+
+## Usage:
 
 Using the CAMLQueryBuilder is very simple. You only need rudimentary knowledge about the structure of Caml querys. Let's assume that user data is to be exported from a SharePoint list. We are only interested in users with the last name "Doe" and the first name "John" or "Jane". Furthermore the users should not be born on 01/01/1970, because the administrator uses this birthdate for obsolete accounts. So the caml query could look like this:
 
@@ -99,26 +111,26 @@ In this example, we have a list of first names that we want to search the ShareP
     <Where>
       <Or>
         <Eq>
-          <FieldRef Name="Vorname" />
+          <FieldRef Name="FirstName" />
           <Value Type="Text">John</Value>
         </Eq>
         <Or>
           <Eq>
-            <FieldRef Name="Vorname" />
+            <FieldRef Name="FirstName" />
             <Value Type="Text">Jane</Value>
           </Eq>
           <Or>
             <Eq>
-              <FieldRef Name="Vorname" />
+              <FieldRef Name="FirstName" />
               <Value Type="Text">Max</Value>
             </Eq>
             <Or>
               <Eq>
-                <FieldRef Name="Vorname" />
+                <FieldRef Name="FirstName" />
                 <Value Type="Text">Powel</Value>
               </Eq>
               <Eq>
-                <FieldRef Name="Vorname" />
+                <FieldRef Name="FirstName" />
                 <Value Type="Text">Arthur</Value>
               </Eq>
             </Or>
