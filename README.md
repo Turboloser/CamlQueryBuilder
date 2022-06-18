@@ -5,12 +5,12 @@ A simple CAML query builder for C# using builder and fluent patterns to easily c
 
 Simple install via NuGet Package Manager:
 ```
-Install-Package CamlQueryBuilder -Version 1.0.0
+Install-Package CamlQueryBuilder -Version 1.0.1
 ```
 
 Or use the .NET CLI:
 ```
-dotnet add package CamlQueryBuilder --version 1.0.0
+dotnet add package CamlQueryBuilder --version 1.0.1
 ```
 
 ## Usage:
